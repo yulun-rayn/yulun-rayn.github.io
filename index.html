@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        width: 100%;
+        border-spacing: 20px;
+      }
+    </style>
+
+    <title>Yulun Wu</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="main.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+
+        <table>
+          <td><img id="headshot", height=auto, width=auto></td>
+          <td width="50%", align="center">
+          <p><font size="+2">Yulun "Rayn" Wu</font></p>
+          <p><font size="-1">yulun dot wu at capitalone.com</font></p>
+          <p><font size="-1">yulun underscore wu at berkeley.edu</font></p>
+          <a style="margin:-0.1em;"></a> 
+          <a href="https://scholar.google.com/citations?user=5QJJxS4AAAAJ" style="margin:1em;"><img src="google-scholar.svg" alt="google scholar" style="width:32px;height:32px;"></a>
+          <a href="https://github.com/yulun-rayn" style="margin:1em;"><img src="github.svg" alt="github" style="width:32px;height:32px;"></a>
+          <a href="https://www.linkedin.com/in/yu-lun-wu/" style="margin:1em;"><img src="linkedin.svg" alt="linkedin" style="width:32px;height:32px;"></a>
+          </tr>
+        </table>
+
+        <script>
+            const images = ["IMG3186.jpg", "IMG3200.jpg"];
+            const storageKey = "lastImageIndex";
+            let lastIndex = localStorage.getItem(storageKey);
+
+            let nextIndex;
+
+            if (lastIndex === null) {
+              // First visit: choose randomly
+              nextIndex = Math.floor(Math.random() * images.length);
+            } else {
+              // Subsequent visits: alternate
+              lastIndex = parseInt(lastIndex);
+              nextIndex = (lastIndex + 1) % images.length;
+            }
+
+            // Show the image and update storage
+            document.getElementById("headshot").src = images[nextIndex];
+            localStorage.setItem(storageKey, nextIndex);
+        </script>
+
+
+        <br>
+        <p>I'm an applied researcher with the AI Foundations team at Capital One in the San Francisco Bay Area.
+          My research interests include deep probabilistic modeling, causal inference, meta learning, and reinforcement learning.
+          I earned my Ph.D. in biostatistics with D.E. in computational science and engineering at University of California, Berkeley.
+        </p>
+
+
+        <h2 id="publications">Selected Publications</h2>
+
+        <p> <font style="font-weight: 1">Zero-shot Meta-learning for Tabular Prediction Tasks with Adversarially Pre-trained Transformer</font> <br/>
+        <font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, and Doron L. Bergman.</font><br/> 
+        <font size="-1">ICML 2025</font><br/> 
+        <a href="https://arxiv.org/pdf/2502.04573">paper</a> /
+        <a href="https://github.com/yulun-rayn/APT">code</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Counterfactual Generative Modeling with Variational Causal Inference</font> <br/>
+        <font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Louie McConnell, and Claudia Iriondo.</font><br/> 
+        <font size="-1">ICLR 2025</font><br/> 
+        <a href="https://arxiv.org/pdf/2410.12730">paper</a> /
+        <a href="https://github.com/yulun-rayn/variational-causal-inference">code</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Longitudinal Targeted Minimum Loss-based Estimation with Temporal-Difference Heterogeneous Transformer</font> <br/>
+        <font size="-1">Toru Shirakawa, Yi Li, </font><font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Sky Qiu, Yuxuan Li, Mingduo Zhao, Hiroyasu Iso, Mark van der Laan.</font><br/> 
+        <font size="-1">ICML 2024</font><br/> 
+        <a href="https://arxiv.org/pdf/2404.04399">paper</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Predicting Cellular Responses with Variational Causal Inference and Refined Relational Information</font> <br/>
+        <font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Robert A. Barton, Zichen Wang, Vassilis N. Ioannidis, Carlo De Donno, Layne C. Price, Luis F. Voloch, and George Karypis.</font><br/> 
+        <font size="-1">ICLR 2023</font><br/> 
+        <a href="https://arxiv.org/pdf/2210.00116">paper</a> /
+        <a href="https://github.com/yulun-rayn/graphVCI">code</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Spatial Graph Attention and Curiosity-driven Policy for Antiviral Drug Discovery</font> <br/>
+        <font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Mikaela Cashman, Nicholas Choma, Erica T. Prates, Verónica G. Melesse Vergara, Manesh Shah, Andrew Chen, Austin Clyde, Thomas S. Brettin, Wibe A. de Jong, Neeraj Kumar, Martha S. Head, Rick L. Stevens, Peter Nugent, Daniel A. Jacobson, and James B. Brown.</font><br/> 
+        <font size="-1">ICLR 2022</font><br/> 
+        <a href="https://arxiv.org/pdf/2106.02190">paper</a> /
+        <a href="https://github.com/yulun-rayn/DGAPN">code</a>
+        </p>
+
+
+        <h2 id="publications">Other Publications</h2>
+
+        <p> <font style="font-weight: 1">Long-term, non-invasive FTIR detection of low-dose ionizing radiation exposure</font> <br/>
+        <font size="-1">Jamie L. Inman*, </font><font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">*, Liang Chen, Ella Brydon, Dhruba Ghosh, Kenneth H. Wan, Jared De Chant, Lieselotte Obst-Huebl, Kei Nakamura, Corie Y. Ralston, Susan E. Celniker, Jian-Hua Mao, Peter H. Zwart, Hoi-Ying N. Holman, Hang Chang, James B. Brown, and Antoine M. Snijders.</font><br/> 
+        <font size="-1">Nature Scientific Reports</font><br/> 
+        <a href="https://www.nature.com/articles/s41598-024-56491-7">paper</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Estimating geographic variation of infection fatality ratios during epidemics</font> <br/>
+        <font size="-1">Joshua Ladau, Eoin L. Brodie, Nicola Falco, Ishan Bansal, Elijah B. Hoffman, Marcin P. Joachimiak, Ana M. Mora, Angelica M. Walker, Haruko M. Wainwright, </font><font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Mirko Pavicic, Daniel Jacobson, Matthias Hess, James B. Brown, and Katrina Abuabara.</font><br/> 
+        <font size="-1">Infectious Disease Modelling</font><br/> 
+        <a href="https://www.sciencedirect.com/science/article/pii/S2468042724000290">paper</a>
+        </p>
+
+        <p> <font style="font-weight: 1">Molecular and functional characterization of the Drosophila melanogaster conserved smORFome</font> <br/>
+        <font size="-1">Justin A. Bosch, Nathan Keith, Felipe Escobedo, William W. Fisher, James Thai LaGraff, Jorden Rabasco, Kenneth H. Wan, Richard Weiszmann, </font><font size="-1" style="font-weight: bold">Yulun Wu</font><font size="-1">, Yanhui Hu, Shu Kondo, James B. Brown, Norbert Perrimon, and Susan E. Celniker.</font><br/> 
+        <font size="-1">Cell Reports</font><br/> 
+        <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)01323-2">paper</a>
+        </p>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="footer-col-wrapper">
+          <div class="footer-col  footer-col-2">
+            <p> </p>
+          </div>
+          <div class="footer-col  footer-col-3">
+            <p class="text"></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
